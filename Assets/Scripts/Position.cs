@@ -5,7 +5,7 @@ using UnityEngine;
 public class Position : MonoBehaviour {
 
 	void OnDrawGizmos() {
-        Gizmos.DrawWireSphere(transform.position, 1);
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 
 }
