@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
+    float xmin = -5;
+    float xmax = 5;
 
 	// Use this for initialization
 	void Start() {
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.DownArrow)) {
 			this.transform.position += Vector3.down * moveSpeed * Time.deltaTime;;
 	    }
+
+        // Restrict player to game space
+        float newX = Mathf.Clamp(this.transform.position.x, xmin, xmax);
+        this.transform.position = new Vector3(newX, this.transform.position.y, this.transform.position.z);
 
 	}
 
