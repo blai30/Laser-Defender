@@ -6,11 +6,11 @@ public class Projectile : MonoBehaviour {
 
     public float damage;
 
-    float GetDamage() {
+    public float GetDamage() {
         return damage;
     }
 
-    void Hit() {
+    public void Hit() {
         Destroy(gameObject);
     }
 
