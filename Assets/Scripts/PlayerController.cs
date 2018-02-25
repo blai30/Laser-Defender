@@ -45,8 +45,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
     void Fire() {
-        GameObject beam = Instantiate(projectile, this.transform.position, Quaternion.identity) as GameObject;
-        beam.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+        Vector3 startPosition = transform.position + new Vector3(0, 1, 0);
+        GameObject missile = Instantiate(projectile, startPosition, Quaternion.identity) as GameObject;
+        missile.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {

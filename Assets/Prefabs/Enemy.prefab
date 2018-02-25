@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4737706226118212}
   - component: {fileID: 212234308004843482}
   - component: {fileID: 50593872471979578}
-  - component: {fileID: 114460248827791942}
   - component: {fileID: 60300988211695574}
+  - component: {fileID: 114460248827791942}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -121,6 +121,7 @@ MonoBehaviour:
   projectile: {fileID: 1447964409830674, guid: ba4f162ee867fbc4d96725745be70ffd, type: 2}
   health: 150
   projectileSpeed: 10
+  frequency: 0.5
 --- !u!212 &212234308004843482
 SpriteRenderer:
   m_ObjectHideFlags: 1

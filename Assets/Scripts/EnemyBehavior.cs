@@ -7,8 +7,16 @@ public class EnemyBehavior : MonoBehaviour {
     public GameObject projectile;
     public float health;
     public float projectileSpeed;
+    public float frequency;
 
     void Update() {
+        float probability = frequency * Time.deltaTime;
+        if (Random.value < probability) {
+            Fire();
+        }
+    }
+
+    void Fire() {
         Vector3 startPosition = transform.position + new Vector3(0, -1, 0);
         GameObject missile = Instantiate(projectile, startPosition, Quaternion.identity) as GameObject;
         missile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
