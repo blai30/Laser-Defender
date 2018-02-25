@@ -53,15 +53,15 @@ public class EnemySpawner : MonoBehaviour {
         }
 	}
 
-    public void OnDrawGizmos() {
-        Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
-    }
-
     void SpawnEnemies() {
         foreach(Transform child in transform) {
             GameObject enemy = Instantiate(enemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
             enemy.transform.parent = child;
         }
+    }
+
+    public void OnDrawGizmos() {
+        Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
     }
 
 }
