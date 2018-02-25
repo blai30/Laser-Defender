@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour {
 
+    public GameObject projectile;
     public float health;
 
     void OnTriggerEnter2D(Collider2D collider) {
