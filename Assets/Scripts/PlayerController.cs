@@ -22,9 +22,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-        if (Input.GetKey(KeyCode.Space)) {
-            GameObject beam = Instantiate(projectile, this.transform.position, Quaternion.identity) as GameObject;
-            beam.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            
         }
 
 		if (Input.GetKey(KeyCode.LeftArrow)) {
@@ -40,5 +39,10 @@ public class PlayerController : MonoBehaviour {
         this.transform.position = new Vector3(newX, this.transform.position.y, this.transform.position.z);
 
 	}
+
+    void Fire() {
+        GameObject beam = Instantiate(projectile, this.transform.position, Quaternion.identity) as GameObject;
+        beam.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+    }
 
 }

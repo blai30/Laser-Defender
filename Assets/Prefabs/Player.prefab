@@ -55,6 +55,7 @@ MonoBehaviour:
   moveSpeed: 7
   padding: 0.5
   projectile: {fileID: 1447964409830674, guid: 1d3c78f9434d40048aaf8d67c2955bac, type: 2}
+  projectileSpeed: 10
 --- !u!212 &212713601229646350
 SpriteRenderer:
   m_ObjectHideFlags: 1
