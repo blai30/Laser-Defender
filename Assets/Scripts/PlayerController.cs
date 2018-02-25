@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	public int moveSpeed;
+
 	// Use this for initialization
 	void Start() {
 		
@@ -11,6 +13,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+			this.transform.position.x -= moveSpeed;
+		}
 		
 	}
 
