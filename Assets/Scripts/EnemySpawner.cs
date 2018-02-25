@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
     public GameObject enemyPrefab;
+    public float width;
+    public float height;
 
 	// Use this for initialization
 	void Start() {
@@ -18,5 +20,9 @@ public class EnemySpawner : MonoBehaviour {
 	void Update() {
 		
 	}
+
+    public void OnDrawGizmos() {
+        Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
+    }
 
 }
