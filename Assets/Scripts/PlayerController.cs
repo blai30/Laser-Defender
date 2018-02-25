@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float padding;
     public GameObject projectile;
     public float projectileSpeed;
+    public float fireRate;
     float xmin;
     float xmax;
 
@@ -23,13 +24,15 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            
+            InvokeRepeating("Fire", 0.000001f, fireRate);
+        }
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            CancelInvoke("Fire");
         }
 
 		if (Input.GetKey(KeyCode.LeftArrow)) {
             this.transform.position += Vector3.left * moveSpeed * Time.deltaTime;;
 		}
-
 		if (Input.GetKey(KeyCode.RightArrow)) {
 			this.transform.position += Vector3.right * moveSpeed * Time.deltaTime;;
 		}
