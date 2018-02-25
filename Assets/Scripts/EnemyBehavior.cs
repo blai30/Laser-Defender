@@ -10,10 +10,10 @@ public class EnemyBehavior : MonoBehaviour {
         Projectile missile = collider.gameObject.GetComponent<Projectile>();
         if (missile) {
             health -= missile.GetDamage();
+            missile.Hit();
             if (health <= 0) {
                 Destroy(gameObject);
             }
-            Debug.Log("Hit by a projectile");
         }
     }
 
