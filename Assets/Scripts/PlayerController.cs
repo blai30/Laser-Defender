@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
     public float padding;
+    public GameObject projectile;
     float xmin;
     float xmax;
 
