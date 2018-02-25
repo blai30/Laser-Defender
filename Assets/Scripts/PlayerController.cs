@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
     public float padding;
     public GameObject projectile;
+    public float projectileSpeed;
     float xmin;
     float xmax;
 
@@ -21,6 +22,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+        if (Input.GetKey(KeyCode.Space)) {
+            GameObject beam = Instantiate(projectile, this.transform.position, Quaternion.identity) as GameObject;
+            beam.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+        }
+
 		if (Input.GetKey(KeyCode.LeftArrow)) {
             this.transform.position += Vector3.left * moveSpeed * Time.deltaTime;;
 		}
