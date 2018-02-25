@@ -602,6 +602,7 @@ MonoBehaviour:
     type: 2}
   width: 10
   height: 5
+  moveSpeed: 2
 --- !u!1001 &1524399122
 Prefab:
   m_ObjectHideFlags: 0

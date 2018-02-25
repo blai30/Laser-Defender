@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour {
     public GameObject enemyPrefab;
     public float width;
     public float height;
+    public float moveSpeed;
+    private bool movingRight = true;
 
 	// Use this for initialization
 	void Start() {
@@ -18,7 +20,11 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		
+		if (movingRight) {
+            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        } else {
+            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+        }
 	}
 
     public void OnDrawGizmos() {
