@@ -13,10 +13,22 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-			this.transform.position.x -= moveSpeed;
+		if (Input.GetKey(KeyCode.LeftArrow)) {
+			this.transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
 		}
-		
+
+		if (Input.GetKey(KeyCode.RightArrow)) {
+			this.transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+		}
+
+		if (Input.GetKey(KeyCode.UpArrow)) {
+			this.transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+		}
+
+		if (Input.GetKey(KeyCode.DownArrow)) {
+			this.transform.position += new Vector3(0, -moveSpeed * Time.deltaTime, 0);
+	    }
+        
 	}
 
 }
