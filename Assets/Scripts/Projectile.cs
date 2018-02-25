@@ -6,14 +6,12 @@ public class Projectile : MonoBehaviour {
 
     public float damage;
 
-	// Use this for initialization
-	void Start() {
-		
-	}
-	
-	// Update is called once per frame
-	void Update() {
-		
-	}
+    float GetDamage() {
+        return damage;
+    }
+
+    void Hit() {
+        Destroy(gameObject);
+    }
 
 }
