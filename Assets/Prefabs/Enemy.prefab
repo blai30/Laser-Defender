@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84e2de9fa744ef43b1e271e2212e8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 1447964409830674, guid: ba4f162ee867fbc4d96725745be70ffd, type: 2}
   health: 150
 --- !u!212 &212234308004843482
 SpriteRenderer:
