@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour {
         xmin = leftEdge.x;
         xmax = rightEdge.x;
 
-        Respawn();
+        SpawnEnemies();
 	}
 	
 	// Update is called once per frame
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour {
         }
 
         if (AllMembersDead()) {
-            Respawn();
+            SpawnEnemies();
         }
 	}
 
@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour {
         Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
     }
 
-    void Respawn() {
+    void SpawnEnemies() {
         foreach(Transform child in transform) {
             GameObject enemy = Instantiate(enemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
             enemy.transform.parent = child;
