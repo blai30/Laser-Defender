@@ -8,6 +8,11 @@ public class EnemyBehavior : MonoBehaviour {
     public float health;
     public float projectileSpeed;
     public float frequency;
+    public int scoreValue;
+
+    void Start() {
+        GameObject.Find("Score").GetComponent<ScoreKeeper>();
+    }
 
     void Update() {
         float probability = frequency * Time.deltaTime;
