@@ -12,12 +12,12 @@ public class ScoreKeeper : MonoBehaviour {
         scoreText = GetComponent<Text>();
     }
 
-    void Score(int points) {
+    public void Score(int points) {
         score += points;
         scoreText.text = score.ToString();
     }
 
-    void Reset() {
+    public void Reset() {
         score = 0;
         scoreText.text = score.ToString();
     }

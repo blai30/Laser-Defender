@@ -9,9 +9,10 @@ public class EnemyBehavior : MonoBehaviour {
     public float projectileSpeed;
     public float frequency;
     public int scoreValue;
+    private ScoreKeeper scoreKeeper;
 
     void Start() {
-        GameObject.Find("Score").GetComponent<ScoreKeeper>();
+        scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
     }
 
     void Update() {
@@ -33,6 +34,7 @@ public class EnemyBehavior : MonoBehaviour {
             health -= missile.GetDamage();
             missile.Hit();
             if (health <= 0) {
+                scoreKeeper.Score(scoreValue);
                 Destroy(gameObject);
             }
         }
