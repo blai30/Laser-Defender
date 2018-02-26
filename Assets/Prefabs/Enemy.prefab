@@ -141,6 +141,8 @@ MonoBehaviour:
   projectileSpeed: 6
   frequency: 0.2
   scoreValue: 1
+  fireSound: {fileID: 8300000, guid: fc8005f614b92ef4a9138a3329878a05, type: 3}
+  deathSound: {fileID: 8300000, guid: a8f19b81c87ca084b9fa31344f944b90, type: 3}
 --- !u!212 &212234308004843482
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -172,8 +174,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 598074421
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c79ef0799880d894eb37172ef082a2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

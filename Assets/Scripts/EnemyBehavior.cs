@@ -9,6 +9,8 @@ public class EnemyBehavior : MonoBehaviour {
     public float projectileSpeed;
     public float frequency;
     public int scoreValue;
+    public AudioClip fireSound;
+    public AudioClip deathSound;
     private ScoreKeeper scoreKeeper;
 
     void Start() {
@@ -26,6 +28,7 @@ public class EnemyBehavior : MonoBehaviour {
         Vector3 startPosition = transform.position + new Vector3(0, -0.5f, 0);
         GameObject missile = Instantiate(projectile, startPosition, Quaternion.identity) as GameObject;
         missile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -34,10 +37,15 @@ public class EnemyBehavior : MonoBehaviour {
             health -= missile.GetDamage();
             missile.Hit();
             if (health <= 0) {
-                scoreKeeper.Score(scoreValue);
-                Destroy(gameObject);
+                Die();
             }
         }
+    }
+
+    void Die() {
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        scoreKeeper.Score(scoreValue);
+        Destroy(gameObject);
     }
 
 }

@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: EnemyProjectile
+    uniqueID: 2370585227
+    locked: 0
+  - name: Enemy
+    uniqueID: 598074421
+    locked: 0
+  - name: PlayerProjectile
+    uniqueID: 4199892407
+    locked: 0
+  - name: Player
+    uniqueID: 1157544919
+    locked: 0
+  - name: Explosion
+    uniqueID: 1478379957
+    locked: 0
