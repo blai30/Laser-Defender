@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour {
     public float width;
     public float height;
     public float moveSpeed;
+    public float spawnDelay;
     private bool movingRight = true;
     private float xmin;
     private float xmax;
@@ -71,8 +72,11 @@ public class EnemySpawner : MonoBehaviour {
 
     void SpawnUntilFull() {
         Transform freePosition = NextFreePosition();
-        GameObject enemy = Instantiate(enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
-        enemy.transform.parent = freePosition;
+        if(freePosition) {
+            GameObject enemy = Instantiate(enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
+            enemy.transform.parent = freePosition;
+        }
+        Invoke("SpawnUnTilFull", spawnDelay);
     }
 
     public void OnDrawGizmos() {
