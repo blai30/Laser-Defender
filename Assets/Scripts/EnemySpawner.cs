@@ -69,6 +69,12 @@ public class EnemySpawner : MonoBehaviour {
         }
     }
 
+    void SpawnUntilFull() {
+        Transform freePosition = NextFreePosition();
+        GameObject enemy = Instantiate(enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
+        enemy.transform.parent = freePosition;
+    }
+
     public void OnDrawGizmos() {
         Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
     }
