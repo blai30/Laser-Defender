@@ -358,6 +358,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4996886031652066, guid: 791cbc33cd84ae7409fb59a6d8e77979,
     type: 2}
   m_PrefabInternal: {fileID: 1524399122}
+--- !u!1001 &520407647
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 693418315}
+    m_Modifications:
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737706226118212, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aebf51cbb1c33be4dbba1c8543b7edcb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &693418315 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4996886031652066, guid: 791cbc33cd84ae7409fb59a6d8e77979,
@@ -689,6 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490210346}
   - component: {fileID: 1490210347}
+  - component: {fileID: 1490210348}
   m_Layer: 0
   m_Name: EnemyFormation
   m_TagString: Untagged
@@ -736,6 +779,23 @@ MonoBehaviour:
   height: 5
   moveSpeed: 2
   spawnDelay: 0.5
+--- !u!95 &1490210348
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490210345}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0dde8611ea7da8409a436909a06557e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1524399122
 Prefab:
   m_ObjectHideFlags: 0
