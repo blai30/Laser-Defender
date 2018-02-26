@@ -21,6 +21,15 @@ public class EnemySpawner : MonoBehaviour {
         return true;
     }
 
+    Transform NextFreePosition() {
+        foreach(Transform childPositionGameObject in transform) {
+            if (childPositionGameObject.childCount == 0) {
+                return childPositionGameObject;;
+            }
+        }
+        return null;
+    }
+
 	// Use this for initialization
 	void Start() {
         float distanceToCamera = transform.position.z - Camera.main.transform.position.z;
