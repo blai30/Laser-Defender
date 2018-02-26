@@ -59,7 +59,7 @@ public class EnemySpawner : MonoBehaviour {
         }
 
         if (AllMembersDead()) {
-            SpawnEnemies();
+            SpawnUntilFull();
         }
 	}
 
@@ -76,7 +76,9 @@ public class EnemySpawner : MonoBehaviour {
             GameObject enemy = Instantiate(enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
             enemy.transform.parent = freePosition;
         }
-        Invoke("SpawnUnTilFull", spawnDelay);
+        if (NextFreePosition()) {
+            Invoke("SpawnUntilFull", spawnDelay);
+        }
     }
 
     public void OnDrawGizmos() {
