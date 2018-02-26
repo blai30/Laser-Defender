@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
     void Fire() {
-        Vector3 startPosition = transform.position + new Vector3(0, 1, 0);
+        Vector3 startPosition = transform.position + new Vector3(0, 0.5f, 0);
         GameObject missile = Instantiate(projectile, startPosition, Quaternion.identity) as GameObject;
         missile.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
     }
