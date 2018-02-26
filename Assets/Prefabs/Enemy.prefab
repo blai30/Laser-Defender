@@ -120,7 +120,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0e0a89141d01e024eb95de08351a5881, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1447964409830674, guid: ba4f162ee867fbc4d96725745be70ffd, type: 2}
-  health: 150
+  health: 1
   projectileSpeed: 6
   frequency: 0.2
   scoreValue: 1

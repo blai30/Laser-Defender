@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour {
     public float projectileSpeed;
     public float fireRate;
     public float health;
-    float xmin;
-    float xmax;
+    public AudioClip fireSound;
+    private float xmin;
+    private float xmax;
 
 	// Use this for initialization
 	void Start() {
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour {
         Vector3 startPosition = transform.position + new Vector3(0, 0.5f, 0);
         GameObject missile = Instantiate(projectile, startPosition, Quaternion.identity) as GameObject;
         missile.GetComponent<Rigidbody2D>().velocity = new Vector3(0, projectileSpeed);
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
